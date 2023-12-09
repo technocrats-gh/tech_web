@@ -1,4 +1,4 @@
-import RoundRockBicycleRepair from "./pages/RoundRockBicycleRepair";
+import RoundRockBicycleRepair from "./pages/main";
 
 function App() {
   return (
