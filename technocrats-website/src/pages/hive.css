@@ -1,6 +1,5 @@
-
 .hive-container {
-top: 40%;
+  top: 40%;
   left: 43.5%;
   position: relative;
   /* to get a regular hexagon with clip-path use the same scale, width is sqrt(3) / 2 of the height  */
@@ -44,7 +43,10 @@ top: 40%;
 }
 
 .box2.box {
-  transform: translate(calc(-50% - (10px / 2)), calc(-75% - (10px) / 2 * 1.732));
+  transform: translate(
+    calc(-50% - (10px / 2)),
+    calc(-75% - (10px) / 2 * 1.732)
+  );
 }
 
 .box3.box {
