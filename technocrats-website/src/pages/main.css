@@ -58,10 +58,10 @@
   left: 0;
   border-radius: var(--br-23xl);
   background-color: var(--color-indianred);
-  width: 10rem;
+  width: 12rem;
   height: 2.88rem;
 }
-.help-me {
+.find-more {
   position: absolute;
   top: 0.75rem;
   left: 2.75rem;
@@ -90,7 +90,7 @@
   height: 3.81rem;
 }
 .group-item,
-.group-parent,
+.hero-parent,
 .rectangle-div {
   position: absolute;
   top: 0;
@@ -98,7 +98,7 @@
   width: 118.94rem;
   height: 52.5rem;
 }
-.group-parent {
+.hero-parent {
   overflow: hidden;
   font-size: 2.25rem;
   color: var(--color-indianred);
@@ -428,7 +428,7 @@
   width: 118.94rem;
   height: 5.75rem;
 }
-.testgmailcom {
+.contact-icons {
   position: absolute;
   top: 0.25rem;
   left: 2.75rem;
@@ -442,14 +442,14 @@
   height: 1.5rem;
   overflow: hidden;
 }
-.testgmailcom-parent {
+.email-parent {
   position: absolute;
   top: 174.63rem;
   left: 58.5rem;
   width: 9.19rem;
   height: 1.5rem;
 }
-.ash-dr-san-jose-south-dakota-parent,
+.address-parent,
 .parent {
   position: absolute;
   top: 178rem;
@@ -457,7 +457,7 @@
   width: 9rem;
   height: 1.5rem;
 }
-.ash-dr-san-jose-south-dakota-parent {
+.address-parent {
   top: 181.38rem;
   width: 19.63rem;
 }

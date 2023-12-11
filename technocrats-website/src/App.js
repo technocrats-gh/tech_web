@@ -1,8 +1,8 @@
-import RoundRockBicycleRepair from "./pages/RoundRockBicycleRepair";
+import TechWeb from "./pages/main";
 
 function App() {
   return (
-    <RoundRockBicycleRepair />
+    <TechWeb />
   );
 }
 export default App;
