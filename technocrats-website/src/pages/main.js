@@ -1,5 +1,7 @@
+import React from "react";
 import "./main.css";
 import "./hive.css";
+import Services from "./Services";
 
 const main = () => {
   return (
@@ -34,64 +36,7 @@ const main = () => {
       {/* ------------------- Hero component ends here ------------------- */}
 
       {/* Section 2 - Services */}
-      <div className="rectangle-parent1">
-        <div className="group-child6" />
-        <div className="repair-and-maintenance">Repair and maintenance</div>
-        <b className="services-for-you">Services for you</b>
-      </div>
-
-      <div className="rectangle-group">
-        {/* <div className="rectangle-div" /> */}{" "}
-        {/* doesn't seem to be useful */}
-        <div className="ellipse-parent">
-          <div className="group-inner" />
-          <div className="lorem-ipsum-is1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text\
-          </div>
-          <b className="diagnosis-and-adjustment">
-            1. Diagnosis and adjustment of the bike
-          </b>
-          <img className="ellipse-icon" alt="" src="/ellipse-4@2x.png" />
-        </div>
-        <div className="ellipse-group">
-          <div className="group-inner" />
-          <div className="lorem-ipsum-is1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-          </div>
-          <b className="diagnosis-and-adjustment">
-            2. Diagnosis and adjustment of the bike
-          </b>
-          <img className="ellipse-icon" alt="" src="/ellipse-41@2x.png" />
-        </div>
-        <div className="ellipse-container">
-          <div className="group-inner" />
-          <div className="lorem-ipsum-is1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-          </div>
-          <b className="diagnosis-and-adjustment">
-            3. Diagnosis and adjustment of the bike
-          </b>
-          <img className="ellipse-icon" alt="" src="/ellipse-5@2x.png" />
-        </div>
-        <div className="group-div">
-          <div className="group-inner" />
-          <div className="lorem-ipsum-is1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-          </div>
-          <b className="diagnosis-and-adjustment">
-            4. Diagnosis and adjustment of the bike
-          </b>
-          <img className="ellipse-icon" alt="" src="/ellipse-6@2x.png" />
-        </div>
-        <div className="rectangle-container">
-          <div className="group-item" />
-          <b className="get-discount-10">Get discount 10%</b>
-        </div>
-      </div>
+      <Services />
       {/* ------------------- Services end here ------------------- */}
 
       {/* SECTION 3 - About Us */}

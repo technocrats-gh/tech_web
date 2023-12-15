@@ -472,3 +472,10 @@
   color: var(--color-white);
   font-family: var(--font-tt-hoves);
 }
+
+.parent-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px !important;
+}
