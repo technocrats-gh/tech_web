@@ -26,3 +26,5 @@ yarn-error.log*
 # lock files from package managers
 yarn.lock
 package-lock.json
+
+.vscode
