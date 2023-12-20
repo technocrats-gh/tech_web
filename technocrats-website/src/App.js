@@ -24,7 +24,7 @@ function App() {
 
       <Features />
 
-      <Benefits/>
+      {/* <Benefits/> */}
 
       <OurExperts/>
 
