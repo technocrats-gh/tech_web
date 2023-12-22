@@ -93,6 +93,27 @@
     transition: 250ms;
     z-index: 30;
 }
+.hive_grid_item:hover .team-info {
+    width: 100%;
+    right: -100%;
+    transform: scale(0.54);
+    display: block;
+}
+
+.team-info {
+    display: none;
+    background-color: rgb(207, 178, 20);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    height: 100%;
+    transition: .5s ease;
+    z-index: 30;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0);
+    transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @media screen and (max-width: 768px) {
     .hive_grid {
