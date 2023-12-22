@@ -54,7 +54,7 @@ function Header({ setIsOpen }) {
       </div>
 
       {/** Nav bar for mobile screens */}
-      <div className="flex lg:hidden justify-between items-center w-full">
+      <div className="flex lg:hidden justify-between items-center pt-3">
         <img
           className="lg:hidden"
           src={LogoWhite}

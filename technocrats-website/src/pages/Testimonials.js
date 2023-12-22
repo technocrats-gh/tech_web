@@ -1,5 +1,5 @@
 import React from "react";
-import TestimonialItem from "./TestimonialItem";
+import TestimonialItem from "../components/TestimonialItem";
 
 function Testimonials() {
   const testimonial =

@@ -1,5 +1,5 @@
 import React from "react";
-import Hive from "./Hive";
+import Hive from "../components/Hive";
 
 function OurExperts() {
   return (
