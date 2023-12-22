@@ -37,6 +37,17 @@ function Hive() {
                 <div class="hive_grid_item">
                     <img src={Image8} alt="Team Member" />
                 </div>
+
+                {/*still a work in progress */}
+                <div className="team-info rounded-2xl text-[18px] leading-[28px] font-normal italic p-2">
+                    <p>
+                        Person Info goes here <br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
         </div>
     )
