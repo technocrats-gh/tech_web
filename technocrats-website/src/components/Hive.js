@@ -17,7 +17,7 @@ function Hive() {
     switch (memberHover) {
         case 1:
             memberName = "Kwaku Amoako Amankwah";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "Our newest software talent, joining our team of Experienced developers. Also holding a Bachelors degree in Mechanical Engineering but has become such an instrumental part of our development process";
             break;
         case 2:
             memberName = "Fredrick Asare";
@@ -25,7 +25,7 @@ function Hive() {
             break;
         case 3:
             memberName = "Emmanuel Botchway";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "Botchway posses many years of experience in developing apps, Mainly mobile apps. He holds a Masters degree in Computer Science from UENR and is part of our wonder team of developers focusing mostly on mobile and edge.";
             break;
         case 4:
             memberName = "Enoch Damtse";
