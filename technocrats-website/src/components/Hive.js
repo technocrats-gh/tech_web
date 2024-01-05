@@ -33,19 +33,19 @@ function Hive() {
             break;
         case 5:
             memberName = "Samuel Nignamon Gyimah";
-            memberBio = "Samuel has worked as a Data Scientist for over 2 years. He holds a bachelors degree in Mechanical Engineering from UENR. He provides valuable ideas and insights in the field of Machine Learning and AI as he leads our team of data scientist ";
+            memberBio = "Samuel has worked as a Data Scientist for over 2 years. He holds a Bachelors degree in Mechanical Engineering from UENR. He provides valuable ideas and insights in the field of Machine Learning and AI as he leads our team of data scientist ";
             break;
         case 6:
             memberName = "Samuel Martey Kodie";
-            memberBio = "With over 4+ years working as a Software Engineer, Samuel Kodie has been responsible in training future generations of developers. He leads our development team and will be the brains behind all the products we bring out.";
+            memberBio = "With over 4+ years working as a Software developer, Samuel Kodie has been responsible in training future generations of developers. He leads our development team and will be the brains behind all the products we bring out.";
             break;
         case 7:
             memberName = "Edward Yakubu Faako";
-            memberBio = "Our chief designer; with over 5+ years of experience in design, prototybing and fabrication. He holds a Masters degree in Engineering design and will lead the team to quickle make ideas a reality";
+            memberBio = "Our chief designer; with over 5+ years of experience in design, prototyping and fabrication. He holds a Masters degree in Mechanical Engineering design and will lead the team to quickle make ideas a reality";
             break;
         case 8:
             memberName = "Mingle Kwesi Akuamoah Boateng";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "As a specialist in Robotics and Automation, He holds a Master's in Robotics and Automation from the University Of Tartu. Mingle, as he goes by is an instrumental part of our robotics team and guides all our automation projects";
             break;
 
         default:
