@@ -29,7 +29,7 @@ function Hive() {
             break;
         case 4:
             memberName = "Enoch Damtse";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "Enoch has 4+ years of experience in the biomedical engineering field, leading a team of Engineers on call in a hospital. He is part of our able team of Automation engineers and holds a Bachelor's Degree in Mechanical Engineering.";
             break;
         case 5:
             memberName = "Samuel Nignamon Gyimah";
