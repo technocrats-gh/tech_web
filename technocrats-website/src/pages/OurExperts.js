@@ -1,11 +1,13 @@
 import React from "react";
 import Hive from "../components/Hive";
-import { handleClickScroll } from "../components/CommonFuns";
 
 function OurExperts() {
+  const scrollToButton = () => {
+    window.scrollTo(0, document.body.scrollHeight)
+  }
 
   return (
-    <section className="container mt-28 text-center w-full" id="team">
+    <section className="container mt-28 text-center w-full">
       <h2 className="text-[32px] font-bold ">Entrepreneurs of Tomorrow</h2>
       <p className="mt-2 max-w-xl m-auto">
         Here, we spotlight the stories, achievements, and aspirations of these young professionals.
@@ -28,7 +30,7 @@ function OurExperts() {
         </div>
       </div>
 
-      <button className="primary-button mt-20" onClick={() => handleClickScroll("footer", 150)}>Contact our Expert</button>
+      <button className="primary-button mt-20" onClick={scrollToButton}>Contact our Expert</button>
     </section>
   );
 }
