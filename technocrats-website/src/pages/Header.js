@@ -1,12 +1,11 @@
 import React from "react";
-import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png"
+import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png";
+import LogoShort from "../assets/images/technocrats-logos/technocrats-logos_crop.jpeg";
+import { Facebook, LinkedIn, GitHub } from "../components/Icons";
+import { handleClickScroll, navItems } from "../components/CommonFuns";
 import "../index.css";
 
 function Header({ setIsOpen }) {
-  const navItems = [
-    { label: 'Services', nav: "services" },
-    { label: 'About Us', nav: 'about' },
-  ];
 
   return (
     <header className="container flex shadow-md md:shadow-none h-30">
@@ -14,11 +13,12 @@ function Header({ setIsOpen }) {
       <div className=" hidden md:hidden lg:flex justify-between w-full mt-5 items-center z-40 bg-zinc-900 p-6 mb-5 rounded-xl">
         <div className="">
           {navItems.map(navItem => (
-            <a href={navItem.nav} className="lg:nav-item">{navItem.label}</a>
+            <div onClick={() => handleClickScroll(navItem.nav, 150)} className="lg:nav-item">{navItem.label}</div>
           ))}
         </div>
 
-        <a href="home">
+        <div className="flex justify-between items-center ml-10 w-7/12">
+          <div className="cursor-pointer" onClick={() => handleClickScroll("home", 150)}>
           <img
             className="h-11"
             src={LogoWhite}
@@ -54,13 +54,16 @@ function Header({ setIsOpen }) {
       </div>
 
       {/** Nav bar for mobile screens */}
-      <div className="flex lg:hidden justify-between items-center pt-3">
-        <img
-          className="lg:hidden"
-          src={LogoWhite}
-          alt=""
-          width="150"
-        />
+      <div className="flex lg:hidden justify-between items-center pt-3 ml-4 w-11/12 fixed bg-zinc-900 z-40">
+        <div onClick={() => handleClickScroll("home", 100)}>
+          <img
+            className="lg:hidden rounded-3xl m-2"
+            src={LogoShort}
+            alt=""
+            width="45"
+          />
+        </div>
+
         {/** onClick to open nav drawer */}
         <i className="fa-solid fa-bars h-10 lg:hidden" onClick={() => setIsOpen(true)}></i>
       </div>
