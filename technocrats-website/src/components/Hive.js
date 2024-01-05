@@ -41,7 +41,7 @@ function Hive() {
             break;
         case 7:
             memberName = "Edward Yakubu Faako";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "Our chief designer; with over 5+ years of experience in design, prototybing and fabrication. He holds a Masters degree in Engineering design and will lead the team to quickle make ideas a reality";
             break;
         case 8:
             memberName = "Mingle Kwesi Akuamoah Boateng";
