@@ -12,7 +12,7 @@ import Testimonials from "./pages/Testimonials";
 import Drawer from "./components/Drawer";
 import DrawerNavItem from "./components/DrawerNavItem";
 import DrawerFooter from "./components/DrawerFooter";
-import { UserGroupIcon } from "./components/Icons";
+import { UserGroupIcon, Home, Adjustments, InformationCircle, Chat} from "./components/Icons";
 
 function App() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -41,11 +41,11 @@ function App() {
       <Footer/>
 
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-        <DrawerNavItem path={"home"} label={"Home"} icon={UserGroupIcon} setIsOpen={setIsOpen} />
-        <DrawerNavItem path={"services"} label={"What We Specialize In"} icon={UserGroupIcon} setIsOpen={setIsOpen} />
+        <DrawerNavItem path={"home"} label={"Home"} icon={Home} setIsOpen={setIsOpen} />
+        <DrawerNavItem path={"services"} label={"What We Specialize In"} icon={Adjustments} setIsOpen={setIsOpen} />
         <DrawerNavItem path={"team"} label={"Our Experts"} icon={UserGroupIcon} setIsOpen={setIsOpen} />
-        <DrawerNavItem path={"testimonials"} label={"What Clients Say"} icon={UserGroupIcon} setIsOpen={setIsOpen} />
-        <DrawerNavItem path={"contactUs"} label={"Contact Us"} icon={UserGroupIcon} setIsOpen={setIsOpen} />
+        <DrawerNavItem path={"testimonials"} label={"What Clients Say"} icon={InformationCircle} setIsOpen={setIsOpen} />
+        <DrawerNavItem path={"footer"} label={"Contact Us"} icon={Chat} setIsOpen={setIsOpen} />
         <DrawerFooter />
       </Drawer>
     </div>
