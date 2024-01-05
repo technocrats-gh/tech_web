@@ -21,11 +21,11 @@ function Hive() {
             break;
         case 2:
             memberName = "Fredrick Asare";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "Fredrick oversees and manages all our projects as the Project Manager. Holding a Bachelors Degree in entrepreneurship for UENR, he coordinates all our activities and liases with potential clients that will need our services and products.";
             break;
         case 3:
             memberName = "Emmanuel Botchway";
-            memberBio = "Botchway posses many years of experience in developing apps, Mainly mobile apps. He holds a Masters degree in Computer Science from UENR and is part of our wonder team of developers focusing mostly on mobile and edge.";
+            memberBio = "Botchway posseses many years of experience in developing apps, Mainly mobile apps. He holds a Masters degree in Computer Science from UENR and is part of our wonder team of developers focusing mostly on mobile and edge.";
             break;
         case 4:
             memberName = "Enoch Damtse";
