@@ -17,19 +17,19 @@ function Hive() {
     switch (memberHover) {
         case 1:
             memberName = "Kwaku Amoako Amankwah";
-            memberBio = "Our newest software talent, joining our team of Experienced developers. Also holding a Bachelors degree in Mechanical Engineering but has become such an instrumental part of our development process";
+            memberBio = "Our newest software talent joining our team of experienced developers. He holds a Bachelors degree in Mechanical Engineering but has become such an instrumental part of our development process";
             break;
         case 2:
             memberName = "Fredrick Asare";
-            memberBio = "Fredrick oversees and manages all our projects as the Project Manager. Holding a Bachelors Degree in entrepreneurship for UENR, he coordinates all our activities and liases with potential clients that will need our services and products.";
+            memberBio = "Fredrick oversees and manages all our projects as the Project Manager. Holding a Bachelors Degree in Entrepreneurship at UENR, he coordinates all our activities and liases with potential clients that will need our services and products.";
             break;
         case 3:
             memberName = "Emmanuel Botchway";
-            memberBio = "Botchway posseses many years of experience in developing apps, Mainly mobile apps. He holds a Masters degree in Computer Science from UENR and is part of our wonder team of developers focusing mostly on mobile and edge.";
+            memberBio = "Emmanuel posseses many years of experience in developing apps, mainly mobile apps. He holds a Masters degree in Computer Science from UENR and is part of our wonderful team of developers focusing mostly on mobile and edge.";
             break;
         case 4:
             memberName = "Enoch Damtse";
-            memberBio = "Enoch has 4+ years of experience in the biomedical engineering field, leading a team of Engineers on call in a hospital. He is part of our able team of Automation engineers and holds a Bachelor's Degree in Mechanical Engineering.";
+            memberBio = "Enoch has 4+ years of experience in the biomedical engineering field, leading a team of engineers on call in a hospital. He is part of our able team of automation engineers and holds a Bachelor's Degree in Mechanical Engineering.";
             break;
         case 5:
             memberName = "Samuel Nignamon Gyimah";
@@ -41,11 +41,11 @@ function Hive() {
             break;
         case 7:
             memberName = "Edward Yakubu Faako";
-            memberBio = "Our chief designer; with over 5+ years of experience in design, prototyping and fabrication. He holds a Masters degree in Mechanical Engineering design and will lead the team to quickle make ideas a reality";
+            memberBio = "Our chief designer; with over 5+ years of experience in design, prototyping and fabrication. He holds a Masters degree in Mechanical Engineering and will lead the team to quickly make ideas a reality";
             break;
         case 8:
             memberName = "Mingle Kwesi Akuamoah Boateng";
-            memberBio = "As a specialist in Robotics and Automation, He holds a Master's in Robotics and Automation from the University Of Tartu. Mingle, as he goes by is an instrumental part of our robotics team and guides all our automation projects";
+            memberBio = "As a specialist in Robotics and Automation, He holds a Master's in Robotics and Automation from the University Of Tartu. Mingle, as he goes by, is an instrumental part of our robotics team and guides all our automation projects";
             break;
 
         default:
