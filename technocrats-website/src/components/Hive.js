@@ -37,7 +37,7 @@ function Hive() {
             break;
         case 6:
             memberName = "Samuel Martey Kodie";
-            memberBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+            memberBio = "With over 4+ years working as a Software Engineer, Samuel Kodie has been responsible in training future generations of developers. He leads our development team and will be the brains behind all the products we bring out.";
             break;
         case 7:
             memberName = "Edward Yakubu Faako";
