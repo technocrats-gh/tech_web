@@ -2,6 +2,10 @@ import React from "react";
 import Hive from "../components/Hive";
 
 function OurExperts() {
+  const scrollToButton = () => {
+    window.scrollTo(0, document.body.scrollHeight)
+  }
+
   return (
     <section className="container mt-28 text-center w-full">
       <h2 className="text-[32px] font-bold ">Entrepreneurs of Tomorrow</h2>
@@ -26,7 +30,7 @@ function OurExperts() {
         </div>
       </div>
 
-      <button className="primary-button mt-20">Contact our Expert</button>
+      <button className="primary-button mt-20" onClick={scrollToButton}>Contact our Expert</button>
     </section>
   );
 }
