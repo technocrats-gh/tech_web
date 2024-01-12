@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { InputTextarea } from "primereact/inputtextarea";
 import { InputText } from 'primereact/inputtext';
-import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png"
+import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png";
+import { GitHub, LinkedIn, Facebook } from "../components/Icons";
+import { handleClickScroll, navItems } from "../components/CommonFuns";
 
 function Footer() {
 
@@ -18,55 +20,65 @@ function Footer() {
       ...prevValue,
       [name]: value,
     }))
-  }
+  };
 
   const SubmitButtonClick = () => {
     console.log(value)
-  }
+  };
 
   return (
-    <div className="mt-24 pt-12 pb-8">
-      <div className="container mb-12 text-center sm:text-left grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
-        <div className="mx-auto sm:ml-0">
-          <img
-            className="cursor-pointer"
-            src={LogoWhite}
-            alt="logo"
-          />
+    <section className="mt-24 pt-12 pb-8" id="footer">
+      <div className="container mb-12 text-center sm:text-left lg:flex justify-between">
+        <div className="mx-auto sm:ml-0 lg:w-1/3 lg:mr-8 mb-8">
+          <div onClick={() => handleClickScroll("home", 150)}>
+            <img
+              className="cursor-pointer"
+              src={LogoWhite}
+              alt="logo"
+            />
+          </div>
 
           <div className="mt-4 flex justify-around">
-            <img className="icon-button" src="./images/insta-icon.svg" alt="" />
-            <img className="icon-button" src="./images/fb-icon.svg" alt="" />
-            <img
-              className="icon-button"
-              src="./images/twitter-icon.svg"
-              alt=""
-            />
+            <div className="icon-button">
+              <GitHub />
+            </div>
+            <div className="icon-button">
+              <LinkedIn />
+            </div>
+            <div className="icon-button">
+              <Facebook />
+            </div>
           </div>
         </div>
 
-        <div>
+        <div className="lg:w-1/3 mb-12">
           <h6 className="font-medium text-xl mb-4">Resources</h6>
-          <Link text="About Us"/>
-          <Link text="Blog"/>
-          <Link text="Contact"/>
-          <Link text="FAQ"/>
+          {navItems.map(navItem => (
+            <div onClick={() => handleClickScroll(navItem.nav, 150)} className="cursor-pointer mt-2">{navItem.label}</div>
+          ))}
         </div>
 
-        <div className="mb-2 " style={{ width: "600px" }}>
+        <div className="mb-2" >
           <h6 className="font-medium text-xl mb-4 ml-1">Contact Us</h6>
-          <div className="flex justify-content-between align-content-center flex-wrap">
-
-            <InputText value={value.sendersName} name="sendersName" type="name" placeholder="Sender's Name" onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left " />
-
-            <InputText value={value.email} name="email" type="email" placeholder="Sender's Email" onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left" />
-
-
-            <InputTextarea value={value.textArea} name="textArea" onChange={handleChange} rows={3} cols={30} placeholder="message" className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left card flex justify-content-center" />
-
-
-            <InputText value={value.tel} name="tel" className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left" type="tel" pattern="[0-9]{10}" placeholder="Enter your phone Number" maxLength={13} onChange={handleChange}
+          <div className="flex justify-content-between align-content-center flex-wrap items-center">
+            <InputText
+              value={value.sendersName} name="sendersName" type="name" placeholder="Sender's Name"
+              onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left "
             />
+            <InputText
+              value={value.email} name="email" type="email" placeholder="Sender's Email"
+              onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"
+            />
+            <InputTextarea
+              value={value.textArea} name="textArea" onChange={handleChange} rows={3} cols={30} placeholder="message"
+              className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left card flex justify-content-center"
+            />
+            {/*Wondering why we're taking phone number */}
+            {/* <InputText
+              value={value.tel} name="tel" maxLength={13} onChange={handleChange}
+              className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"
+              type="tel" pattern="[0-9]{10}" placeholder="Enter your phone Number" 
+            /> */}
 
             <button className="primary-button mt-6" onClick={SubmitButtonClick}>Submit</button>
 
@@ -77,9 +89,9 @@ function Footer() {
       </div>
 
       <p className="text-center mt-12">
-        Made With Love By Product All Right Reserved
+        Technocrats: All Rights Reserved
       </p>
-    </div>
+    </section>
   );
 }
 
