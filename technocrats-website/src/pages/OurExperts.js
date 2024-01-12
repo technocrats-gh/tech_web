@@ -5,7 +5,7 @@ import { handleClickScroll } from "../components/CommonFuns";
 function OurExperts() {
 
   return (
-    <section className="container mt-28 text-center w-full">
+    <section className="container mt-28 text-center w-full" id="team">
       <h2 className="text-[32px] font-bold ">Entrepreneurs of Tomorrow</h2>
       <p className="mt-2 max-w-xl m-auto">
         Here, we spotlight the stories, achievements, and aspirations of these young professionals.
