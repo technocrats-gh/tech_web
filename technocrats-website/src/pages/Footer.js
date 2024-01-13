@@ -4,6 +4,7 @@ import { InputText } from 'primereact/inputtext';
 import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png";
 import { GitHub, LinkedIn, Facebook } from "../components/Icons";
 import { handleClickScroll, navItems } from "../components/CommonFuns";
+import axios from "axios"
 
 function Footer() {
 
@@ -23,7 +24,36 @@ function Footer() {
   };
 
   const SubmitButtonClick = () => {
-    console.log(value)
+    //  Validate the form
+    let isFalse = false;
+
+    if (value.sendersName.length === 0 || value.email.length === 0 || value.textArea.length === 0) {
+      console.log('Please fill out this field ');
+      isFalse = true;
+    }
+
+    if (!value.email.includes('@')) {
+      console.log('Invalid email format');
+      isFalse = true;
+    }
+
+    if (!isFalse) {
+      // console.log(value)
+      axios.post('https://formspree.io/f/xrgngrrw', value)
+        .then(res => {
+          console.log(res.data)
+          if (res.data.ok) {
+            console.log("Message has been sent successfully");
+            // TODO: display a modal showing message has been sent successfully. 
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+    else {
+      console.log("Failed! The form is not completely filled.")
+    }
   };
 
   return (
@@ -37,7 +67,6 @@ function Footer() {
               alt="logo"
             />
           </div>
-
           <div className="mt-4 flex justify-around">
             <div className="icon-button">
               <GitHub />
@@ -97,6 +126,6 @@ function Footer() {
 
 export default Footer;
 
-export function Link({text}) {
+export function Link({ text }) {
   return <p className="cursor-pointer mt-2">{text}</p>;
 }
