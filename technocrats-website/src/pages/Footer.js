@@ -42,12 +42,10 @@ function Footer() {
       axios.post('https://formspree.io/f/xrgngrrw', value)
         .then(res => {
           console.log(res.data)
-          console.log("ur nose");
           if (res.data.ok) {
             console.log("Message has been sent successfully");
             // TODO: display a modal showing message has been sent successfully. 
           }
-
         })
         .catch(error => {
           console.error('Error:', error);
