@@ -3,13 +3,13 @@ import TestimonialItem from "../components/TestimonialItem";
 
 function Testimonials() {
   const testimonial =
-    "Product helps you see how many more days you need to work to reach your financial goal.";
+    `I contracted this team for a job I am extremely satisfied with the quality of their services. 
+    I would highly recommend this company to anyone looking for reliable and efficient tech solutions`;
   return (
     <section className="container mt-36 text-center flex flex-col items-center" id="testimonials">
       <h3 className="text-4xl font-bold">What Clients Say</h3>
       <p className="font-medium mt-4 max-w-lg">
-        Problems trying to resolve the conflict between the two major realms of
-        Classical physics: Newtonian mechanics{" "}
+        Developing and implementing bespoke efficient and effective solutions to meet our clients' needs
       </p>
 
       <div className="mt-12 min-w-[80vw] justify-center md:gap-4 md:min-w-full grid gap-8 md:grid-cols-3">

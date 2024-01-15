@@ -1,65 +1,65 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import axios from "axios";
+import validator from "validator";
+import { useFormik } from 'formik';
 import { InputTextarea } from "primereact/inputtextarea";
 import { InputText } from 'primereact/inputtext';
+import { Toast } from 'primereact/toast';
 import LogoWhite from "../assets/images/technocrats-logos/technocrats-logos_stroke.png";
 import { GitHub, LinkedIn, Facebook } from "../components/Icons";
 import { handleClickScroll, navItems } from "../components/CommonFuns";
-import axios from "axios"
+import "../styles/footer.css"
 
 function Footer() {
+  const toast = useRef(null);
 
-  const [value, setValue] = useState({
-    sendersName: '',
-    email: '',
-    textArea: '',
-    tel: '',
-  });
+  const showToast = (severity, summary, detail) => {
+    toast.current.show({ severity, summary, detail, life: 3000 });
+  }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValue(prevValue => ({
-      ...prevValue,
-      [name]: value,
-    }))
-  };
-
-  const SubmitButtonClick = () => {
-    //  Validate the form
-    let isFalse = false;
-
-    if (value.sendersName.length === 0 || value.email.length === 0 || value.textArea.length === 0) {
-      console.log('Please fill out this field ');
-      isFalse = true;
-    }
-
-    if (!value.email.includes('@')) {
-      console.log('Invalid email format');
-      isFalse = true;
-    }
-
-    if (!isFalse) {
-      // console.log(value)
-      axios.post('https://formspree.io/f/xrgngrrw', value)
+  const formik = useFormik({
+    initialValues: {
+      sendersName: '',
+      email: '',
+      textArea: '',
+    },
+    onSubmit: values => {
+      axios.post('https://formspree.io/f/xrgngrrw', values)
         .then(res => {
-          console.log(res.data)
           if (res.data.ok) {
-            console.log("Message has been sent successfully");
-            // TODO: display a modal showing message has been sent successfully. 
+            showToast('success', "Success", "Message has been sent successfully");
           }
         })
         .catch(error => {
-          console.error('Error:', error);
+          showToast('error', "Error", error)
         });
+    },
+    validate: values => {
+      const errors = {};
+
+      if (!validator.isEmail(values.email)) {
+        errors.email = "Invalid email address"
+      } else if (!values.email) {
+        errors.email = "Required"
+      }
+
+      if (!values.sendersName || values.sendersName === "") {
+        errors.sendersName = "Required"
+      }
+
+      if (!values.textArea || values.textArea === "") {
+        errors.textArea = "Required"
+      }
+
+      return errors;
     }
-    else {
-      console.log("Failed! The form is not completely filled.")
-    }
-  };
+  });
 
   return (
     <section className="mt-24 pt-12 pb-8" id="footer">
+      <Toast ref={toast} position="bottom-right" />
       <div className="container mb-12 text-center sm:text-left lg:flex justify-between">
-        <div className="mx-auto sm:ml-0 lg:w-1/3 lg:mr-8 mb-8">
+        <div className="mx-auto sm:ml-0 lg:w-2/6 lg:mr-8 mb-8">
           <div onClick={() => handleClickScroll("home", 150)}>
             <img
               className="cursor-pointer"
@@ -80,37 +80,46 @@ function Footer() {
           </div>
         </div>
 
-        <div className="lg:w-1/3 mb-12">
+        <div className="lg:w-1/6 mb-12 lg:mr-10">
           <h6 className="font-medium text-xl mb-4">Resources</h6>
           {navItems.map(navItem => (
             <div onClick={() => handleClickScroll(navItem.nav, 150)} className="cursor-pointer mt-2">{navItem.label}</div>
           ))}
         </div>
 
-        <div className="mb-2" >
+        <div className="mb-2 lg:w-3/6" >
           <h6 className="font-medium text-xl mb-4 ml-1">Contact Us</h6>
-          <div className="flex justify-content-between align-content-center flex-wrap items-center">
-            <InputText
-              value={value.sendersName} name="sendersName" type="name" placeholder="Sender's Name"
-              onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left "
-            />
-            <InputText
-              value={value.email} name="email" type="email" placeholder="Sender's Email"
-              onChange={handleChange} className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"
-            />
-            <InputTextarea
-              value={value.textArea} name="textArea" onChange={handleChange} rows={3} cols={30} placeholder="message"
-              className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left card flex justify-content-center"
-            />
-            {/*Wondering why we're taking phone number */}
-            {/* <InputText
-              value={value.tel} name="tel" maxLength={13} onChange={handleChange}
-              className="mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"
-              type="tel" pattern="[0-9]{10}" placeholder="Enter your phone Number" 
-            /> */}
-
-            <button className="primary-button mt-6" onClick={SubmitButtonClick}>Submit</button>
-
+          <div className="">
+            <form onSubmit={formik.handleSubmit}>
+              <InputText
+                name="sendersName" type="name" placeholder="Sender's Name" onChange={formik.handleChange} value={formik.values.sendersName}
+                className={formik.errors.sendersName
+                  ? "mb-1 w-full p-2 bg-transparent outline-none border border-[red] rounded-md text-left"
+                  : "mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"}
+              />
+              {formik.errors.sendersName && formik.touched.sendersName &&
+                <div className=" text-red-600 text-left mb-3 ">{formik.errors.sendersName}</div>
+              }
+              <InputText
+                onChange={formik.handleChange} value={formik.values.email} name="email" type="email" placeholder="Sender's Email"
+                className={formik.errors.email
+                  ? "mb-1 w-full p-2 bg-transparent outline-none border border-[red] rounded-md text-left"
+                  : "mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"}
+              />
+              {formik.errors.email && formik.touched.email &&
+                <div className=" text-red-600 text-left mb-3 ">{formik.errors.sendersName}</div>
+              }
+              <InputTextarea
+                onChange={formik.handleChange} value={formik.values.textArea} name="textArea" rows={3} cols={30} placeholder="message"
+                className={formik.errors.textArea
+                  ? "w-full p-2 bg-transparent outline-none border border-[red] rounded-md text-left"
+                  : "mb-2 w-full p-2 bg-transparent outline-none border border-[#BCD0E5] rounded-md text-left"}
+              />
+              {formik.errors.textArea && formik.touched.textArea &&
+                <div className=" text-red-600 text-left mb-3 ">{formik.errors.sendersName}</div>
+              }
+              <button type="submit" className="primary-button mt-6">Submit</button>
+            </form>
           </div>
 
         </div>
@@ -125,7 +134,3 @@ function Footer() {
 }
 
 export default Footer;
-
-export function Link({ text }) {
-  return <p className="cursor-pointer mt-2">{text}</p>;
-}

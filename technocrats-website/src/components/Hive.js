@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion"
 import Image1 from "../assets/images/team/amankwah.jpg";
 import Image2 from "../assets/images/team/asare.jpg";
 import Image3 from "../assets/images/team/botchway.jpg";
@@ -12,7 +13,7 @@ import "../styles/hive.css";
 function Hive() {
     let memberBio, memberName;
 
-    const [memberHover, setMemberHover] = useState(0)
+    const [memberHover, setMemberHover] = useState(10);
 
     switch (memberHover) {
         case 1:
@@ -40,7 +41,7 @@ function Hive() {
             memberBio = "With over 4+ years working as a Software developer, Samuel Kodie has been responsible in training future generations of developers. He leads our development team and will be the brains behind all the products we bring out.";
             break;
         case 7:
-            memberName = "Edward Yakubu Faako";
+            memberName = "Edward Faako  Yakubu ";
             memberBio = "Our chief designer; with over 5+ years of experience in design, prototyping and fabrication. He holds a Masters degree in Mechanical Engineering and will lead the team to quickly make ideas a reality";
             break;
         case 8:
@@ -96,14 +97,18 @@ function Hive() {
 
                 {/*The commented code below is supposed to wrap around the team info component and only display when there 
                 is a bio to show. That works but the transition doesn't work when this is implemented */}
-                {/* {memberBio !== "" && 
-                } */}
-                <div className="team-info rounded-2xl text-[18px] leading-[28px] font-normal italic p-2">
-                    <p>
-                        {memberName} <br />
-                        {memberBio}
-                    </p>
-                </div>
+                <AnimatePresence>
+                    {memberBio !== "" &&
+                        <motion.div className="team-info rounded-2xl text-[18px] leading-[28px] font-normal italic p-2"
+                            animate={{ x: [null, 100, 0], opacity: 1, scale: 1.2 }} initial={{ opacity: 0, scale: 0.1 }}
+                            transition={{ ease: "easeOut", duration: 1 }} exit={{ opacity: 0, scale: 0.1 }}>
+                            <p>
+                                {memberName} <br />
+                                {memberBio}
+                            </p>
+                        </motion.div>
+                    }
+                </AnimatePresence>
             </div>
         </div>
     )

@@ -20,12 +20,12 @@ function Hero() {
       </div>
       <section id="home" className="container mt-14 md:flex flex-row justify-between items-center w-full">
         <div className="pt-1"></div>
-        <div className="md:max-w-[50%] lg:max-w-[62%] mt-14 mr-12 mb-8">
+        <div className="md:max-w-[50%] lg:max-w-[62%] mt-14 mr-12 mb-8 z-10">
           <img src={Robot} alt="hero" />
         </div>
 
         {/* text section */}
-        <div className="text-center sm:text-left md:max-w-[40%]">
+        <div className="text-center sm:text-left md:max-w-[40%] z-10">
           <h1 className="font-bold text-4xl leading-[60px]">
             Meet the Trailblazers: Young Minds Shaping the Future
           </h1>
