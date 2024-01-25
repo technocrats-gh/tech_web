@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.176baa93.css",
+    "main.js": "/static/js/main.12302e35.js",
+    "static/media/RobortLG.png": "/static/media/RobortLG.6d222684bbde8f08e889.png",
+    "static/media/faako.jpg": "/static/media/faako.30f86680afcd0a1e7522.jpg",
+    "static/media/damtse.jpg": "/static/media/damtse.e094ab55028a395c8f52.jpg",
+    "static/media/kodie.jpg": "/static/media/kodie.eebe7af1e8a44c9b7658.jpg",
+    "static/media/boateng.jpg": "/static/media/boateng.1c659b34a1d937884120.jpg",
+    "static/media/amankwah.jpg": "/static/media/amankwah.7be5a989fcdd11cb7962.jpg",
+    "static/media/gyimah.jpg": "/static/media/gyimah.fdb321f8c16603b1e46c.jpg",
+    "static/media/asare.jpg": "/static/media/asare.b1d4d448f7270da74e3d.jpg",
+    "static/media/botchway.jpg": "/static/media/botchway.eae7aed3d23cb80308c6.jpg",
+    "static/media/technocrats-logos_stroke.png": "/static/media/technocrats-logos_stroke.90fd72ac54c7e1f7601e.png",
+    "index.html": "/index.html",
+    "main.176baa93.css.map": "/static/css/main.176baa93.css.map",
+    "main.12302e35.js.map": "/static/js/main.12302e35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.176baa93.css",
+    "static/js/main.12302e35.js"
+  ]
+}
